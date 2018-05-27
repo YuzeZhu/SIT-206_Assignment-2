@@ -1,14 +1,14 @@
 //
-//  Albums.swift
+//  startViewController.swift
 //  Assignment-2
 //
-//  Created by ZHU YUZE ZHU on 22/4/18.
+//  Created by ZHU YUZE ZHU on 27/5/18.
 //  Copyright © 2018 ZHU YUZE ZHU. All rights reserved.
 //
 
 import UIKit
 
-class Albums: UIViewController {
+class startViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
