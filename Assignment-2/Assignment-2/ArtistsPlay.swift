@@ -39,10 +39,14 @@ class ArtistsPlay: UIViewController {
     @IBOutlet weak var songProgress: UIProgressView!
     @IBOutlet weak var volumeSlider: UISlider!
     
+    
+    let sinngerImg = #imageLiteral(resourceName: "Adele")
     //IBActions
     @IBAction func play(_ sender: UIButton) {
         if playOrResume == true{
             musicPlayer.resume()
+            
+            
         }
         else{
             musicPlayer.play(filterBy: filterBySinger)
@@ -60,6 +64,7 @@ class ArtistsPlay: UIViewController {
     
     @IBAction func previous(_ sender: UIButton) {
         musicPlayer.previous(filterBy: filterBySinger)
+        _ = #imageLiteral(resourceName: "luisfonsi")
         updateUI()
     }
     

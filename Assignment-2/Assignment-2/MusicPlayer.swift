@@ -9,13 +9,13 @@
 import Foundation
 import AVFoundation
 
-typealias SongDetails = (index : Int, title : String, singer : String, timeElapsed : Double, duration : Double)
+typealias SongDetails = (index : Int, title : String, singer : String, timeElapsed : Double, duration : Double )
 //This class maintains the list of songs available for the user to play
 class PlayList {
     var songsBySinger : [String : [String]] = [ String : [String]] ()
     var songs : [String] = [String]()
     init() {
-        songs += ["yanni_allsessons", "adele_hello", "luis fonsi_despacito"]
+        songs += ["adele_hello", "luis fonsi_despacito","yanni_allsessons" ]
         songsBySinger = [
             "Adele" : ["adele_hello"],
             "Luis Fonsi" : ["Luis Fonsi_despacito"],
@@ -64,7 +64,7 @@ class MusicPlayer {
     func setCurrentSong(filter: String, index: Int) -> Bool{
         let (song , singer) = playList.getSongAt(forSinger: filter, index: index)
         if loadSong(song) == true {
-            currentSong = (index : index, title: song, singer: singer , timeElapsed : 0, duration : player.duration)
+            currentSong = (index : index, title: song, singer: singer , timeElapsed : 0, duration : player.duration )
             return true
         }
         else { return false }
